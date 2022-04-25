@@ -43,6 +43,13 @@
             this.lblCaptainAway = new System.Windows.Forms.Label();
             this.lblStadium = new System.Windows.Forms.Label();
             this.lblCapacity = new System.Windows.Forms.Label();
+            this.btnCheck = new System.Windows.Forms.Button();
+            this.dtgMatch = new System.Windows.Forms.DataGridView();
+            this.lbSkor = new System.Windows.Forms.Label();
+            this.lbTanggal = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgMatch)).BeginInit();
             this.SuspendLayout();
             // 
             // cBoxTimHome
@@ -131,60 +138,122 @@
             this.lblManagerHome.AutoSize = true;
             this.lblManagerHome.Location = new System.Drawing.Point(124, 81);
             this.lblManagerHome.Name = "lblManagerHome";
-            this.lblManagerHome.Size = new System.Drawing.Size(44, 16);
+            this.lblManagerHome.Size = new System.Drawing.Size(16, 16);
             this.lblManagerHome.TabIndex = 9;
-            this.lblManagerHome.Text = "label8";
+            this.lblManagerHome.Text = "...";
             // 
             // lblCaptainHome
             // 
             this.lblCaptainHome.AutoSize = true;
-            this.lblCaptainHome.Location = new System.Drawing.Point(127, 110);
+            this.lblCaptainHome.Location = new System.Drawing.Point(124, 110);
             this.lblCaptainHome.Name = "lblCaptainHome";
-            this.lblCaptainHome.Size = new System.Drawing.Size(44, 16);
+            this.lblCaptainHome.Size = new System.Drawing.Size(16, 16);
             this.lblCaptainHome.TabIndex = 10;
-            this.lblCaptainHome.Text = "label9";
+            this.lblCaptainHome.Text = "...";
             // 
             // lblManagerAway
             // 
             this.lblManagerAway.AutoSize = true;
             this.lblManagerAway.Location = new System.Drawing.Point(454, 81);
             this.lblManagerAway.Name = "lblManagerAway";
-            this.lblManagerAway.Size = new System.Drawing.Size(51, 16);
+            this.lblManagerAway.Size = new System.Drawing.Size(16, 16);
             this.lblManagerAway.TabIndex = 11;
-            this.lblManagerAway.Text = "label10";
+            this.lblManagerAway.Text = "...";
             // 
             // lblCaptainAway
             // 
             this.lblCaptainAway.AutoSize = true;
-            this.lblCaptainAway.Location = new System.Drawing.Point(457, 109);
+            this.lblCaptainAway.Location = new System.Drawing.Point(454, 110);
             this.lblCaptainAway.Name = "lblCaptainAway";
-            this.lblCaptainAway.Size = new System.Drawing.Size(51, 16);
+            this.lblCaptainAway.Size = new System.Drawing.Size(16, 16);
             this.lblCaptainAway.TabIndex = 12;
-            this.lblCaptainAway.Text = "label11";
+            this.lblCaptainAway.Text = "...";
             // 
             // lblStadium
             // 
             this.lblStadium.AutoSize = true;
             this.lblStadium.Location = new System.Drawing.Point(299, 192);
             this.lblStadium.Name = "lblStadium";
-            this.lblStadium.Size = new System.Drawing.Size(51, 16);
+            this.lblStadium.Size = new System.Drawing.Size(16, 16);
             this.lblStadium.TabIndex = 13;
-            this.lblStadium.Text = "label12";
+            this.lblStadium.Text = "...";
             // 
             // lblCapacity
             // 
             this.lblCapacity.AutoSize = true;
             this.lblCapacity.Location = new System.Drawing.Point(299, 220);
             this.lblCapacity.Name = "lblCapacity";
-            this.lblCapacity.Size = new System.Drawing.Size(51, 16);
+            this.lblCapacity.Size = new System.Drawing.Size(16, 16);
             this.lblCapacity.TabIndex = 14;
-            this.lblCapacity.Text = "label13";
+            this.lblCapacity.Text = "...";
+            // 
+            // btnCheck
+            // 
+            this.btnCheck.Location = new System.Drawing.Point(225, 253);
+            this.btnCheck.Name = "btnCheck";
+            this.btnCheck.Size = new System.Drawing.Size(75, 23);
+            this.btnCheck.TabIndex = 15;
+            this.btnCheck.Text = "Check";
+            this.btnCheck.UseVisualStyleBackColor = true;
+            this.btnCheck.Click += new System.EventHandler(this.btnCheck_Click);
+            // 
+            // dtgMatch
+            // 
+            this.dtgMatch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgMatch.Location = new System.Drawing.Point(25, 347);
+            this.dtgMatch.Name = "dtgMatch";
+            this.dtgMatch.RowHeadersWidth = 51;
+            this.dtgMatch.RowTemplate.Height = 24;
+            this.dtgMatch.Size = new System.Drawing.Size(654, 202);
+            this.dtgMatch.TabIndex = 16;
+            // 
+            // lbSkor
+            // 
+            this.lbSkor.AutoSize = true;
+            this.lbSkor.Location = new System.Drawing.Point(295, 318);
+            this.lbSkor.Name = "lbSkor";
+            this.lbSkor.Size = new System.Drawing.Size(16, 16);
+            this.lbSkor.TabIndex = 20;
+            this.lbSkor.Text = "...";
+            // 
+            // lbTanggal
+            // 
+            this.lbTanggal.AutoSize = true;
+            this.lbTanggal.Location = new System.Drawing.Point(295, 290);
+            this.lbTanggal.Name = "lbTanggal";
+            this.lbTanggal.Size = new System.Drawing.Size(16, 16);
+            this.lbTanggal.TabIndex = 19;
+            this.lbTanggal.Text = "...";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(226, 318);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(41, 16);
+            this.label10.TabIndex = 18;
+            this.label10.Text = "Skor :";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(222, 290);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(64, 16);
+            this.label11.TabIndex = 17;
+            this.label11.Text = "Tanggal :";
             // 
             // formPertandingan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(685, 268);
+            this.ClientSize = new System.Drawing.Size(691, 556);
+            this.Controls.Add(this.lbSkor);
+            this.Controls.Add(this.lbTanggal);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.dtgMatch);
+            this.Controls.Add(this.btnCheck);
             this.Controls.Add(this.lblCapacity);
             this.Controls.Add(this.lblStadium);
             this.Controls.Add(this.lblCaptainAway);
@@ -203,6 +272,7 @@
             this.Name = "formPertandingan";
             this.Text = "Hasil Pertandingan";
             this.Load += new System.EventHandler(this.formPertandingan_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgMatch)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -225,6 +295,12 @@
         private System.Windows.Forms.Label lblCaptainAway;
         private System.Windows.Forms.Label lblStadium;
         private System.Windows.Forms.Label lblCapacity;
+        private System.Windows.Forms.Button btnCheck;
+        private System.Windows.Forms.DataGridView dtgMatch;
+        private System.Windows.Forms.Label lbSkor;
+        private System.Windows.Forms.Label lbTanggal;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
     }
 }
 
