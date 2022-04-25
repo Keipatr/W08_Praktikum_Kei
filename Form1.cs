@@ -69,14 +69,14 @@ namespace W08_Praktikum_Kei
         private void btnCheck_Click(object sender, EventArgs e)
         {
             DataTable dtTanggal = new DataTable();
-            sqlQuery = "select date_format(m.match_date,\"%d %M %Y\") as `Tanggal` from `match` m, team t where m.team_home = t.team_id and and' m.team_away ='" + cBoxTimAway.SelectedValue.ToString() + "'and m.team_home = '" + cBoxTimHome.SelectedValue.ToString() + "'";
+            sqlQuery = "select date_format(m.match_date, \"%e %M %Y\") as Tanggal from `match` m where m.team_home = '" + cBoxTimHome.SelectedValue.ToString() + "' and m.team_away = '" + cBoxTimAway.SelectedValue.ToString() + "'";
             sqlCommand = new MySqlCommand(sqlQuery, sqlConnect);
             sqlAdapter = new MySqlDataAdapter(sqlCommand);
             sqlAdapter.Fill(dtTanggal);
             lbTanggal.Text = dtTanggal.Rows[cBoxTimHome.SelectedIndex]["Tanggal"].ToString();
 
             DataTable dtSkor = new DataTable();
-            sqlQuery = "select concat(goal_home,' - ', goal_away) as `skor`, match_date, team_away,team_home from `match` m, team t where m.team_home = t.team_id and and m.team_away = '" + cBoxTimAway.SelectedValue.ToString() + "'and m.team_home = '" + cBoxTimHome.SelectedValue.ToString()+"'";
+            sqlQuery = "select concat(goal_home, ' - ', goal_away) as skor from `match` m where m.team_home = '" + cBoxTimHome.SelectedValue.ToString() + "' and m.team_away = '" + cBoxTimAway.SelectedValue.ToString() + "'";
             sqlCommand = new MySqlCommand(sqlQuery, sqlConnect);                            
             sqlAdapter = new MySqlDataAdapter(sqlCommand);
             sqlAdapter.Fill(dtSkor);
